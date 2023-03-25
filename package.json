@@ -4,7 +4,7 @@
   "description": "Server Side RESTful API Provider",
   "main": "server.js",
   "scripts": {
-    "test": "npm test",
+    "test": "node server.js",
     "start": "node server.js"
   },
   "repository": {
