@@ -122,9 +122,11 @@ app.delete('/contacts/:cid',function(req,res){
 })
 
 dbConnect().catch(console.error)
-var server = app.listen(8081, function(){
+
+const port = process.env.PORT || 8081
+
+var server = app.listen(port, function(){
     const host = "127.0.0.1"
-    const port = server.address().port
     console.log("API Server running at http://%s:%s",host,port)
 })
 server.on('close',function(event){
