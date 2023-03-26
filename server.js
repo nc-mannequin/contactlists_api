@@ -61,6 +61,10 @@ var app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+app.get('/',function(req,res){
+    res.json({ status: "look fine" })
+})
+
 app.get('/contacts',function(req,res){
     getAllContacts().then((result) => {
         console.log(result)
