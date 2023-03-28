@@ -19,7 +19,6 @@ async function main() {
     await mongoose.connect(url);
   }
 
-const { appendFile } = require('fs')
 app.use(cors())
 
 var routes = require('./routes/contactListRoutes')
