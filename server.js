@@ -15,8 +15,13 @@ port = process.env.PORT || 5001
 Contact = require('./models/contactListModel')
 mongoose.Promise = global.Promise
 async function main() {
-    url = "mongodb://127.0.0.1/ContactList"
-    await mongoose.connect(url);
+    url = "mongodb://puttimaitviw:E063TajKsVgJ036H@ac-97bisij-shard-00-00.ekxhdtj.mongodb.net:27017,ac-97bisij-shard-00-01.ekxhdtj.mongodb.net:27017,ac-97bisij-shard-00-02.ekxhdtj.mongodb.net:27017/?ssl=true&replicaSet=atlas-18qz92-shard-0&authSource=admin&retryWrites=true&w=majority"
+    const option = {
+        dbName: "ContactList"
+    }
+    //E063TajKsVgJ036H
+    //mongodb://puttimaitviw:<password>@ac-97bisij-shard-00-00.ekxhdtj.mongodb.net:27017,ac-97bisij-shard-00-01.ekxhdtj.mongodb.net:27017,ac-97bisij-shard-00-02.ekxhdtj.mongodb.net:27017/?ssl=true&replicaSet=atlas-18qz92-shard-0&authSource=admin&retryWrites=true&w=majority
+    await mongoose.connect(url, option)
   }
 
 app.use(cors())
