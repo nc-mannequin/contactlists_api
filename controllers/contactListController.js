@@ -1,7 +1,7 @@
 'use strict'
 
 var mongoose = require('mongoose')
-Contact = mongoose.model( 'Contacts',null,'Contacts')
+Contact = mongoose.model( 'Contacts', null, 'Contacts')
 
 exports.listAllContacts = async function(req,res){
     const result = await Contact.find({}).sort( {cid: 1} )
