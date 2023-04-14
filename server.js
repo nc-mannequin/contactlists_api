@@ -25,7 +25,7 @@ async function main() {
     await mongoose.connect(url, option)
   }
 
-app.use(cors({ origin: 'https://contact-list-3200.herokuapp.com/', credentials: true }));
+app.use(cors({ origin: 'https://purple-flower-09d96a40f.3.azurestaticapps.net/', credentials: true }));
 
 var routes = require('./routes/contactListRoutes')
 routes(app)
