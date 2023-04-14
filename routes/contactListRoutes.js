@@ -11,4 +11,10 @@ var contactList = require('../controllers/contactListController')
         .get(contactList.readAContact) // Show a particular Contact
         .delete(contactList.deleteAContact) // Delete one Contact
         .post(contactList.updateAContact) // Update one Contact
+
+var user = require('../controllers/userController')
+
+    app.route('/login')
+        .post(user.login) // Simple Login
+
 }
