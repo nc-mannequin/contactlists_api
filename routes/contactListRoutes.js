@@ -4,7 +4,7 @@ module.exports = function(app){
 var contactList = require('../controllers/contactListController')
 
     app.route('/contacts')
-        .get(verifyToken,contactList.listAllContacts) //Show all Contacts
+        .get(contactList.listAllContacts) //Show all Contacts
         .post(contactList.createAContact) // Insert a new Contact
 
     app.route('/contacts/:id')
